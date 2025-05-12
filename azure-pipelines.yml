@@ -19,3 +19,12 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- script: |
+    setx TYPESPEC_VSCODE_TELEMETRY_KEY "20698735-a180-4374-add0-9fba474f66c0"
+    echo %TYPESPEC_VSCODE_TELEMETRY_KEY%
+  displayName: 'environment variable setup'
+
+- script: |
+    echo %TYPESPEC_VSCODE_TELEMETRY_KEY%
+  displayName: 'display variable'
